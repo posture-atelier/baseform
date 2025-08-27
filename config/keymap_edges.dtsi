@@ -11,5 +11,5 @@
 #define TRANS_ROW \
     &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans &trans
 
-#define ROW_TRANS(...) &trans __VA_ARGS__ &trans
+#define TRANS_FLANK(...) &trans __VA_ARGS__ &trans
 
