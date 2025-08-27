@@ -40,10 +40,10 @@
     colemak_layer {
       display-name = "colemak";
       bindings = <
-        TOP_ROW
-        ROW2( &hm RALT Q &kp W &kp F &kp P &kp B    &kp J &kp L &kp U &kp Y &hm RALT APOS )
-        ROW3( &kp A &kp R &kp S &kp T &kp G    &kp M &kp N &kp E &kp I &kp O )
-        ROW4( &hm RCTRL Z &kp X &kp C &kp D &kp V    &kp K &kp H &kp COMMA &kp DOT &hm RCTRL RET )
+        ROW4
+        ROW3( &hm RALT Q &kp W &kp F &kp P &kp B    &kp J &kp L &kp U &kp Y &hm RALT APOS )
+        ROW2( &kp A &kp R &kp S &kp T &kp G    &kp M &kp N &kp E &kp I &kp O )
+        ROW1( &hm RCTRL Z &kp X &kp C &kp D &kp V    &kp K &kp H &kp COMMA &kp DOT &hm RCTRL RET )
         THUMB_ROW
       >;
     };
