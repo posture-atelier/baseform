@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
+#include "keymap_edges.dtsi"
 
 #define QWE 0
 #define SYM 1
@@ -39,11 +40,11 @@
     qwerty_layer {
       display-name = "qwerty";
       bindings = <
-        &kp ESC        &kp N1          &kp N2       &kp N3         &kp N4           &kp N5               &kp N6          &kp N7          &kp N8        &kp N9       &kp N0          &kp BSPC         
-        &kp TAB        &hm RALT Q      &kp W        &kp E          &kp R            &kp T                &kp Y           &kp U           &kp I         &kp O        &kp P           &kp RSHFT          
-        &kp LALT       &kp A           &kp S        &kp D          &kp F            &kp G                &kp H           &kp J           &kp K         &kp L        &hm RALT RET    &kp RALT     
-        &kp LCTRL      &hm RCTRL Z     &kp X        &kp C          &kp V            &kp B                &kp N           &kp M           &kp COMMA     &kp DOT      &hm RCTRL APOS  &kp RCTRL
-                                                    &mt LGUI ESC   &lt SYM TAB      &hm LSHFT SPACE      &lt FUN RET     &lt NAV BSPC    &lt MET DEL
+        TOP_ROW
+        ROW2(&hm RALT Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P)
+        ROW3(&kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &hm RALT RET)
+        ROW4(&hm RCTRL Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &hm RCTRL APOS)
+        THUMB_ROW
       >;
     };
 
