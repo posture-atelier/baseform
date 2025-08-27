@@ -48,51 +48,54 @@
       >;
     };
 
-
     symbols {
       display-name = "symbols";
       bindings = <
-        &trans         &trans         &trans       &trans         &trans           &trans               &trans         &trans         &trans        &trans       &trans       &trans         
-        &trans         &kp PRCNT      &kp CARET    &kp GRAVE      &kp TILDE        &none                &none          &kp LT         &kp GT        &kp LBKT     &kp RBKT     &trans          
-        &trans         &kp HASH       &kp AT       &kp EXCL       &kp QMARK        &none                &kp EQUAL      &kp LPAR       &kp RPAR      &kp LBRC     &kp RBRC     &trans     
-        &trans         &none          &kp AMPS     &kp DLLR       &kp SEMI         &kp PIPE             &kp UNDER      &kp COLN       &kp FSLH      &kp BSLH     &none        &trans
-                                                   &trans         &none            &trans               &trans         &trans         &trans
+        TRANS_ROW
+        ROW_TRANS( &kp PRCNT &kp CARET &kp GRAVE &kp TILDE &none    &none &kp LT &kp GT &kp LBKT &kp RBKT )
+        ROW_TRANS( &kp HASH &kp AT &kp EXCL &kp QMARK &none    &kp EQUAL &kp LPAR &kp RPAR &kp LBRC &kp RBRC )
+        ROW_TRANS( &none &kp AMPS &kp DLLR &kp SEMI &kp PIPE    &kp UNDER &kp COLN &kp FSLH &kp BSLH &none )
+                                                   &trans         &none            &trans               &trans         &trans
+      &trans
       >;
     };
 
     navigation {
       display-name = "navigate";
       bindings = <
-        &trans         &trans         &trans       &trans         &trans           &trans               &trans         &trans         &trans        &trans       &trans        &trans    
-        &trans         &kp PRCNT      &kp KP_N7    &kp KP_N8      &kp KP_N9        &kp KP_PLUS          &kp PG_UP      &kp HOME       &kp UP        &kp END      &none         &trans          
-        &trans         &kp KP_DOT     &kp KP_N4    &kp KP_N5      &kp KP_N6        &kp KP_MINUS         &kp PG_DN      &kp LEFT       &kp DOWN      &kp RIGHT    &none         &trans     
-        &trans         &kp KP_COMMA   &kp KP_N1    &kp KP_N2      &kp KP_N3        &kp KP_MULTIPLY      &none          &kp ASTRK      &kp FSLH      &kp PLUS     &kp MINUS     &trans
+        TRANS_ROW
+        ROW_TRANS( &kp PRCNT &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_PLUS    &kp PG_UP &kp HOME &kp UP &kp END &none )
+        ROW_TRANS( &kp KP_DOT &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_MINUS    &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &none )
+        ROW_TRANS( &kp KP_COMMA &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_MULTIPLY    &none &kp ASTRK &kp FSLH &kp PLUS &kp MINUS )
                                                    &kp KP_EQUAL   &kp KP_N0        &kp KP_DIVIDE        &trans         &none          &trans
+      &trans
       >;
     };
 
     function {
       display-name = "function";
       bindings = <
-        &trans         &trans         &trans       &trans         &trans           &trans               &trans         &trans         &trans        &trans       &trans        &trans
-        &trans         &kp C_BRI_UP   &kp F7       &kp F8         &kp F9           &kp F10              &none          &none          &none         &none        &none         &trans         
-        &trans         &kp C_BRI_DN   &kp F4       &kp F5         &kp F6           &kp F11              &kp LNLCK     	&kp CAPS      &kp LSLCK     &kp PSCRN    &kp INS       &trans   
-        &trans         &none          &kp F1       &kp F2         &kp F3           &kp F12              &kp C_VOL_UP   &kp C_VOL_DN   &kp C_PP      &kp C_NEXT   &kp C_PREV    &trans
-                                                   &kp ESC        &trans           &trans               &none          &trans         &trans
+        TRANS_ROW
+        ROW_TRANS( &kp C_BRI_UP &kp F7 &kp F8 &kp F9 &kp F10    &none &none &none &none &none )
+        ROW_TRANS( &kp C_BRI_DN &kp F4 &kp F5 &kp F6 &kp F11    &kp LNLCK &kp CAPS &kp LSLCK &kp PSCRN &kp INS )
+        ROW_TRANS( &none &kp F1 &kp F2 &kp F3 &kp F12    &kp C_VOL_UP &kp C_VOL_DN &kp C_PP &kp C_NEXT &kp C_PREV )
+                                                    &kp ESC        &trans           &trans               &none          &trans         &trans
+      &trans
       >;
     };
 
     meta {
       display-name = "zmk";
       bindings = <
-        &trans         &trans         &trans       &trans         &trans           &trans               &trans            &trans         &trans        &trans       &trans        &trans  
-        &trans         &soft_off      &out OUT_USB &out OUT_BLE   &none            &bt BT_CLR           &ext_power EP_TOG &trans         &trans        &none        &soft_off     &trans         
-        &trans         &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3     &bt BT_SEL 4         &none             &none          &none         &none        &none         &trans     
-        &trans         &studio_unlock &none        &bootloader    &sys_reset       &none                &none             &sys_reset     &bootloader   &none        &none         &trans
-                                                   &none           &trans           &tog 0               &trans            &trans         &none
+        TRANS_ROW
+        ROW_TRANS( &soft_off &out OUT_USB &out OUT_BLE &none &bt BT_CLR    &ext_power EP_TOG &trans &trans &none &soft_off )
+        ROW_TRANS( &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none &none &none &none &none )
+        ROW_TRANS( &studio_unlock &none &bootloader &sys_reset &none    &none &sys_reset &bootloader &none &none )
+                                                     &none           &trans           &tog 0               &trans            &trans         &none
 
       >;
     };
+
 
     extra1 {
         status = "reserved";

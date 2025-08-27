@@ -8,3 +8,8 @@
 #define ROW3(...) &kp LALT __VA_ARGS__ &kp RALT
 #define ROW4(...) &kp LCTRL __VA_ARGS__ &kp RCTRL
 
+#define TRANS_ROW \
+    &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans &trans
+
+#define ROW_TRANS(...) &trans __VA_ARGS__ &trans
+
