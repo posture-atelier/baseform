@@ -3,12 +3,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
+#include "../layer_defs.dtsi"
+#include "../keymap_edges.dtsi"
 
 #define DVO 0
-#define SYM 1
-#define NAV 2
-#define FUN 3
-#define MET 4
 
 &lt {
   tapping-term-ms = <150>;
@@ -39,59 +37,15 @@
     dvorak_layer {
       display-name = "dvorak";
       bindings = <
-        &kp ESC     &kp N1         &kp N2       &kp N3         &kp N4           &kp N5               &kp N6         &kp N7          &kp N8        &kp N9       &kp N0          &kp BSPC         
-        &kp TAB     &hm RALT APOS  &kp COMMA    &kp DOT        &kp P            &kp Y                &kp F          &kp G           &kp C         &kp R        &hm RALT L      &kp RSHFT         
-        &kp LALT    &kp A          &kp O        &kp E          &kp U            &kp I                &kp D          &kp H           &kp T         &kp N        &kp S           &kp RALT     
-        &kp LCTRL   &hm RCTRL COLN &kp Q        &kp J          &kp K            &kp X                &kp B          &kp M           &kp W         &kp V        &hm RCTRL Z     &kp RCTRL
-                                                &mt LGUI ESC   &lt SYM TAB      &hm LSHFT SPACE      &lt FUN RET    &lt NAV BSPC    &lt MET DEL
+        ROW4
+        ROW3( &hm RALT APOS   &kp COMMA  &kp DOT  &kp P  &kp Y    &kp F  &kp G  &kp C  &kp R  &hm RALT L  )
+        ROW2( &kp A           &kp O      &kp E    &kp U  &kp I    &kp D  &kp H  &kp T  &kp N  &kp S       )
+        ROW1( &hm RCTRL COLN  &kp Q      &kp J    &kp K  &kp X    &kp B  &kp M  &kp W  &kp V  &hm RCTRL Z )
+        THUMB_ROW
       >;
     };
-
-
-    symbols {
-      display-name = "symbols";
-      bindings = <
-        &trans         &trans         &trans       &trans         &trans           &trans               &trans         &trans         &trans        &trans       &trans       &trans         
-        &trans         &kp PRCNT      &kp CARET    &kp GRAVE      &kp TILDE        &none                &none          &kp LT         &kp GT        &kp LBKT     &kp RBKT     &trans          
-        &trans         &kp HASH       &kp AT       &kp EXCL       &kp QMARK        &none                &kp EQUAL      &kp LPAR       &kp RPAR      &kp LBRC     &kp RBRC     &trans     
-        &trans         &none          &kp AMPS     &kp DLLR       &kp SEMI         &kp PIPE             &kp UNDER      &kp COLN       &kp FSLH      &kp BSLH     &none        &trans
-                                                   &trans         &none            &trans               &trans         &trans         &trans
-      >;
-    };
-
-    navigation {
-      display-name = "navigate";
-      bindings = <
-        &trans         &trans         &trans       &trans         &trans           &trans               &trans         &trans         &trans        &trans       &trans        &trans    
-        &trans         &kp PRCNT      &kp KP_N7    &kp KP_N8      &kp KP_N9        &kp KP_PLUS          &kp PG_UP      &kp HOME       &kp UP        &kp END      &none         &trans          
-        &trans         &kp KP_DOT     &kp KP_N4    &kp KP_N5      &kp KP_N6        &kp KP_MINUS         &kp PG_DN      &kp LEFT       &kp DOWN      &kp RIGHT    &none         &trans     
-        &trans         &kp KP_COMMA   &kp KP_N1    &kp KP_N2      &kp KP_N3        &kp KP_MULTIPLY      &none          &kp ASTRK      &kp FSLH      &kp PLUS     &kp MINUS     &trans
-                                                   &kp KP_EQUAL   &kp KP_N0        &kp KP_DIVIDE        &trans         &none          &trans
-      >;
-    };
-
-    function {
-      display-name = "function";
-      bindings = <
-        &trans         &trans         &trans       &trans         &trans           &trans               &trans         &trans         &trans        &trans       &trans        &trans
-        &trans         &kp C_BRI_UP   &kp F7       &kp F8         &kp F9           &kp F10              &none          &none          &none         &none        &none         &trans         
-        &trans         &kp C_BRI_DN   &kp F4       &kp F5         &kp F6           &kp F11              &kp LNLCK     	&kp CAPS      &kp LSLCK     &kp PSCRN    &kp INS       &trans   
-        &trans         &none          &kp F1       &kp F2         &kp F3           &kp F12              &kp C_VOL_UP   &kp C_VOL_DN   &kp C_PP      &kp C_NEXT   &kp C_PREV    &trans
-                                                   &kp ESC        &trans           &trans               &none          &trans         &trans
-      >;
-    };
-
-    meta {
-      display-name = "zmk";
-      bindings = <
-        &trans         &trans         &trans       &trans         &trans           &trans               &trans            &trans         &trans        &trans       &trans        &trans  
-        &trans         &soft_off      &out OUT_USB &out OUT_BLE   &none            &bt BT_CLR           &ext_power EP_TOG &trans         &trans        &none        &soft_off     &trans         
-        &trans         &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3     &bt BT_SEL 4         &none             &none          &none         &none        &none         &trans     
-        &trans         &studio_unlock &none        &bootloader    &sys_reset       &none                &none             &sys_reset     &bootloader   &none        &none         &trans
-                                                   &none           &trans           &tog 0               &trans            &trans         &none
-
-      >;
-    };
+ 
+#include "../shared_layers.dtsi"
 
     extra1 {
         status = "reserved";
