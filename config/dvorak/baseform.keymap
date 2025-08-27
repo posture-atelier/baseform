@@ -3,13 +3,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
+#include "../layer_defs.dtsi"
 #include "../keymap_edges.dtsi"
 
 #define DVO 0
-#define SYM 1
-#define NAV 2
-#define FUN 3
-#define MET 4
 
 &lt {
   tapping-term-ms = <150>;
@@ -47,55 +44,8 @@
         THUMB_ROW
       >;
     };
-
-    symbols {
-      display-name = "symbols";
-      bindings = <
-        TRANS_ROW
-        TRANS_FLANK( &kp PRCNT &kp CARET &kp GRAVE &kp TILDE &none    &none &kp LT &kp GT &kp LBKT &kp RBKT )
-        TRANS_FLANK( &kp HASH &kp AT &kp EXCL &kp QMARK &none    &kp EQUAL &kp LPAR &kp RPAR &kp LBRC &kp RBRC )
-        TRANS_FLANK( &none &kp AMPS &kp DLLR &kp SEMI &kp PIPE    &kp UNDER &kp COLN &kp FSLH &kp BSLH &none )
-                                                   &trans         &none            &trans               &trans         &trans
-      &trans
-      >;
-    };
-
-    navigation {
-      display-name = "navigate";
-      bindings = <
-        TRANS_ROW
-        TRANS_FLANK( &kp PRCNT &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_PLUS    &kp PG_UP &kp HOME &kp UP &kp END &none )
-        TRANS_FLANK( &kp KP_DOT &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_MINUS    &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &none )
-        TRANS_FLANK( &kp KP_COMMA &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_MULTIPLY    &none &kp ASTRK &kp FSLH &kp PLUS &kp MINUS )
-                                                   &kp KP_EQUAL   &kp KP_N0        &kp KP_DIVIDE        &trans         &none          &trans
-      &trans
-      >;
-    };
-
-    function {
-      display-name = "function";
-      bindings = <
-        TRANS_ROW
-        TRANS_FLANK( &kp C_BRI_UP &kp F7 &kp F8 &kp F9 &kp F10    &none &none &none &none &none )
-        TRANS_FLANK( &kp C_BRI_DN &kp F4 &kp F5 &kp F6 &kp F11    &kp LNLCK &kp CAPS &kp LSLCK &kp PSCRN &kp INS )
-        TRANS_FLANK( &none &kp F1 &kp F2 &kp F3 &kp F12    &kp C_VOL_UP &kp C_VOL_DN &kp C_PP &kp C_NEXT &kp C_PREV )
-                                                    &kp ESC        &trans           &trans               &none          &trans         &trans
-      &trans
-      >;
-    };
-
-    meta {
-      display-name = "zmk";
-      bindings = <
-        TRANS_ROW
-        TRANS_FLANK( &soft_off &out OUT_USB &out OUT_BLE &none &bt BT_CLR    &ext_power EP_TOG &trans &trans &none &soft_off )
-        TRANS_FLANK( &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none &none &none &none &none )
-        TRANS_FLANK( &studio_unlock &none &bootloader &sys_reset &none    &none &sys_reset &bootloader &none &none )
-                                                     &none           &trans           &tog 0               &trans            &trans         &none
-
-      >;
-    };
-
+ 
+#include "../shared_layers.dtsi"
 
     extra1 {
         status = "reserved";
