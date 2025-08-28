@@ -38,9 +38,9 @@
       display-name = "qwerty";
       bindings = <
         ROW4
-        ROW3( &hm RALT Q   &kp W  &kp E  &kp R  &kp T    &kp Y  &kp U  &kp I      &kp O    &kp P          )
-        ROW2( &kp A        &kp S  &kp D  &kp F  &kp G    &kp H  &kp J  &kp K      &kp L    &hm RALT RET   )
-        ROW1( &hm RCTRL Z  &kp X  &kp C  &kp V  &kp B    &kp N  &kp M  &kp COMMA  &kp DOT  &hm RCTRL APOS )
+        ROW3( &kp Q        &kp W       &kp E  &kp R  &kp T    &kp Y  &kp U  &kp I      &kp O         &kp P          )
+        ROW2( &kp A        &kp S       &kp D  &kp F  &kp G    &kp H  &kp J  &kp K      &kp L         &kp APOS       )
+        ROW1( &hm LCTRL Z  &hm LALT X  &kp C  &kp V  &kp B    &kp N  &kp M  &kp COMMA  &hm RALT DOT  &hm RCTRL COLON )
         THUMB_ROW
       >;
     };
