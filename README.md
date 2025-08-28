@@ -16,3 +16,4 @@
 
 [Learn about the Baseform Keyboard here](https://posture.works/baseform/)
 
+<img src="https://posture.works/wp-content/uploads/2025/08/Keymaps-Narrow.png" alt="Keymaps" />
