@@ -16,3 +16,7 @@
 
 [Learn about the Baseform Keyboard here](https://posture.works/baseform/)
 
+![Keymaps Base Layers](https://posture.works/wp-content/uploads/2025/08/Keymaps-Base-Layers-Narrow.jpg)
+![Keymaps Shared Layers](https://posture.works/wp-content/uploads/2025/08/Keymaps-Shared-Layers-1-Narrow.jpg)
+![Keymaps Shared Layers 2](https://posture.works/wp-content/uploads/2025/08/Keymaps-Shared-Layers-2-Narrow-scaled.jpg)
+
