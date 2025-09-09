@@ -1,5 +1,9 @@
 ![Baseform Keyboard](https://posture.works/cdn-cgi/image/width=2048,height=1365,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2025/08/Cover-Creative-2.jpg)
 
+The TRIO firmware is what you want if you're running Baseform with a Central Module, this is the default/standard version that all units ship with.
+
+The DUO firmware is for running the Baseform without the Central Module. Your left half acts as a Central. This version has limited testing, and might have bugs.
+
 <!-- FIRMWARE-LINKS:START - Do not edit below, this section is managed by CI -->
 #### Firmware v2025.08.26
 - QWERTY
