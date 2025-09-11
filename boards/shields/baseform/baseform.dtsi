@@ -12,8 +12,9 @@
 
     chosen {
         zephyr,display = &oled;
-	zmk,physical-layout = &baseform_6x4_lo;
-	zmk,studio-rpc-uart = &uart1;
+        zmk,physical-layout = &baseform_6x4_lo;
+        zmk,studio-rpc-uart = &uart1;
+        zmk,underglow = &ws2812;
     };
 
     baseform_6x4_lo: baseform_6x4_lo {
