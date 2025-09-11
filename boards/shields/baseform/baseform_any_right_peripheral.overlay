@@ -1,14 +1,4 @@
 #include "baseform.dtsi"
-
-/ {
-    chosen {
-        /delete-property/ zmk,underglow;
-    };
-};
-
-&ws2812 {
-    status = "disabled";
-};
 &baseform_6x4_tf {
 	col-offset = <6>;
 };
