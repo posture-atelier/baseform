@@ -14,7 +14,7 @@
         zephyr,display = &oled;
         zmk,physical-layout = &baseform_6x4_lo;
         zmk,studio-rpc-uart = &uart1;
-        zmk,underglow = &ws2812;
+        zmk,underglow = &underglow_ws2812;
     };
 
     baseform_6x4_lo: baseform_6x4_lo {
@@ -307,7 +307,7 @@
                 ;
     };
 
-    ws2812: led_strip {
+    underglow_ws2812: led_strip {
         compatible = "worldsemi,ws2812";
         label = "WS2812";
         chain-length = <1>;

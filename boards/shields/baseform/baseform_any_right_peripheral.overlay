@@ -1,25 +1,25 @@
 #include "baseform.dtsi"
 &baseform_6x4_tf {
-	col-offset = <6>;
+        col-offset = <6>;
 };
 &baseform_6x3_tf {
-	col-offset = <6>;
+        col-offset = <6>;
 };
 &baseform_5x3_tf {
-	col-offset = <6>;
+        col-offset = <6>;
 };
 &kscan0 {
     col-gpios
-	= <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	, <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	, <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	, <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	, <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	, <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        = <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
 };
 
-&ws2812 {
+&underglow_ws2812 {
     status = "okay";
     chain-length = <1>;
 };
