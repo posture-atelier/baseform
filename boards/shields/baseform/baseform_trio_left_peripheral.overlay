@@ -1,6 +1,1 @@
 #include "baseform.dtsi"
-
-&ws2812 {
-    status = "okay";
-    chain-length = <1>;
-};
