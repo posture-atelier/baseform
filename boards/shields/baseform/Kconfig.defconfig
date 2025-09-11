@@ -74,6 +74,9 @@ endif # LVGL
 # -------------------------
 # RGB underglow
 # -------------------------
+if SHIELD_BASEFORM_TRIO_BASE_CENTRAL || SHIELD_BASEFORM_TRIO_LEFT_PERIPHERAL || \
+   SHIELD_BASEFORM_DUO_LEFT_CENTRAL  || SHIELD_BASEFORM_ANY_RIGHT_PERIPHERAL
+
 config ZMK_RGB_UNDERGLOW
     default y
 
@@ -83,4 +86,6 @@ config WS2812_STRIP
     default y
 
 endif # ZMK_RGB_UNDERGLOW
+
+endif # baseform shields
 
