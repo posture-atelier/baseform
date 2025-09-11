@@ -18,3 +18,8 @@
 	, <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
 };
+
+&ws2812 {
+    status = "okay";
+    chain-length = <1>;
+};
