@@ -7,6 +7,11 @@
 #include "../keymap_edges.dtsi"
 
 #define QWE 0
+#define COL 1
+#define SYM 2
+#define NAV 3
+#define FUN 4
+#define MET 5
 
 &lt {
   tapping-term-ms = <150>;
@@ -36,6 +41,17 @@
 
     qwerty_layer {
       display-name = "qwerty";
+      bindings = <
+        ROW4
+        ROW3( &kp Q        &kp W       &kp E  &kp R  &kp T    &kp Y  &kp U  &kp I      &kp O         &kp P          )
+        ROW2( &kp A        &kp S       &kp D  &kp F  &kp G    &kp H  &kp J  &kp K      &kp L         &kp APOS       )
+        ROW1( &hm LCTRL Z  &hm LALT X  &kp C  &kp V  &kp B    &kp N  &kp M  &kp COMMA  &hm RALT DOT  &hm RCTRL COLON )
+        THUMB_ROW
+      >;
+    };
+
+    colemak_layer {
+      display-name = "colemak";
       bindings = <
         ROW4
         ROW3( &kp Q        &kp W       &kp E  &kp R  &kp T    &kp Y  &kp U  &kp I      &kp O         &kp P          )
