@@ -38,7 +38,7 @@
         TRANS_FLANK( &soft_off       &out OUT_USB  &out OUT_BLE  &none         &bt BT_CLR     &ext_power EP_TOG &trans     &trans      &none &soft_off )
         TRANS_FLANK( &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &none             &none      &none       &none &none     )
         TRANS_FLANK( &studio_unlock  &none         &bootloader   &sys_reset    &none          &none             &sys_reset &bootloader &none &none     )
-                                                   &none         &trans        &tog 0         &trans            &trans     &none
+                                                   &none         &trans        &tog 1         &trans            &trans     &none
       >;
     };
 
