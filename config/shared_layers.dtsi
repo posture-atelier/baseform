@@ -13,10 +13,10 @@
       display-name = "navigate";
       bindings = <
         TRANS_ROW
-        TRANS_FLANK( &kp PRCNT     &kp KP_7  &kp KP_8  &kp KP_9  &kp KP_PLUS        &kp PG_UP  &kp HOME   &kp UP    &kp END    &none     )
-        TRANS_FLANK( &kp KP_DOT    &kp KP_4  &kp KP_5  &kp KP_6  &kp KP_MINUS       &kp PG_DN  &kp LEFT   &kp DOWN  &kp RIGHT  &none     )
-        TRANS_FLANK( &kp KP_COMMA  &kp KP_1  &kp KP_2  &kp KP_3  &kp KP_MULTIPLY    &none      &kp ASTRK  &kp FSLH  &kp PLUS   &kp MINUS )
-                                              &kp KP_EQUAL &kp KP_N0 &kp KP_DIVIDE     &trans     &none      &trans 
+        TRANS_FLANK( &kp PRCNT     &kp N7  &kp N8  &kp N9  &kp KP_PLUS        &kp PG_UP  &kp HOME   &kp UP    &kp END    &none     )
+        TRANS_FLANK( &kp KP_DOT    &kp N4  &kp N5  &kp N6  &kp KP_MINUS       &kp PG_DN  &kp LEFT   &kp DOWN  &kp RIGHT  &none     )
+        TRANS_FLANK( &kp KP_COMMA  &kp N1  &kp N2  &kp N3  &kp KP_MULTIPLY    &none      &kp ASTRK  &kp FSLH  &kp PLUS   &kp MINUS )
+                                              &kp KP_EQUAL &kp N0 &kp KP_DIVIDE     &trans     &none      &trans 
       >;
     };
 
