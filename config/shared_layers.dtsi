@@ -13,9 +13,9 @@
       display-name = "navigate";
       bindings = <
         TRANS_ROW
-        TRANS_FLANK( &kp PRCNT  &kp N7  &kp N8    &kp N9  &kp PLUS        &kp PG_UP  &kp HOME   &kp UP    &kp END    &none     )
-        TRANS_FLANK( &kp DOT    &kp N4  &kp N5    &kp N6  &kp MINUS       &kp PG_DN  &kp LEFT   &kp DOWN  &kp RIGHT  &none     )
-        TRANS_FLANK( &kp COMMA  &kp N1  &kp N2    &kp N3  &kp ASTRK       &none      &kp ASTRK  &kp FSLH  &kp PLUS   &kp MINUS )
+        TRANS_FLANK( &kp PRCNT  &kp N7  &kp N8    &kp N9  &kp PLUS        &none      &kp HOME   &kp UP    &kp PG_UP    &none     )
+        TRANS_FLANK( &kp DOT    &kp N4  &kp N5    &kp N6  &kp MINUS       &none      &kp LEFT   &kp DOWN  &kp RIGHT    &none     )
+        TRANS_FLANK( &kp COMMA  &kp N1  &kp N2    &kp N3  &kp ASTRK       &none      &kp END    &kp DOWN  &kp PG_DN    &none     )
                                         &kp EQUAL &kp N0  &kp FSLH        &trans     &none      &trans 
       >;
     };
