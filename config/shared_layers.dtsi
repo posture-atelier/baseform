@@ -2,9 +2,9 @@
       display-name = "symbols";
       bindings = <
         TRANS_ROW
-        TRANS_FLANK( &none      &kp LPAR   &kp LT     &kp LBKT   &kp LBRC     &kp RBRC   &kp RBKT  &kp GT    &kp RPAR  &none     )
+        TRANS_FLANK( &kp PRCNT  &kp LPAR   &kp LT     &kp LBKT   &kp LBRC     &kp RBRC   &kp RBKT  &kp GT    &kp RPAR  &kp ASTRK )
         TRANS_FLANK( &kp TILDE  &kp SEMI   &kp EXCL   &kp QMARK  &kp UNDER    &kp EQUAL  &kp AT    &kp HASH  &kp COLN  &kp CARET )
-        TRANS_FLANK( &none      &kp GRAVE  &kp AMPS   &kp FSLH   &none        &none      &kp BSLH  &kp DLLR  &kp PIPE  &none     )
+        TRANS_FLANK( &none      &kp GRAVE  &kp AMPS   &kp FSLH   &kp PLUS     &kp MINUS  &kp BSLH  &kp DLLR  &kp PIPE  &none     )
                                            &trans     &none      &trans       &trans     &trans    &trans
       >;
     };
