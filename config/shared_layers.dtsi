@@ -1,4 +1,4 @@
-    symbols {	wq
+    symbols {	
       display-name = "symbols";
       bindings = <
         TRANS_ROW
