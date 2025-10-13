@@ -36,6 +36,9 @@ if SHIELD_BASEFORM_TRIO_BASE_CENTRAL || SHIELD_BASEFORM_TRIO_LEFT_PERIPHERAL || 
 config ZMK_SPLIT
     default y
 
+config ZMK_RGB_UNDERGLOW
+    default y
+
 endif # split
 
 # -------------------------

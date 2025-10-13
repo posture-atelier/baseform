@@ -4,10 +4,11 @@ name: baseform
 type: shield
 url: https://github.com/hmngwy/baseform
 requires: [nice_nano_v2]
-exposes: [i2c_oled]
+exposes: [i2c_oled, underglow]
 features:
   - keys
   - display
+  - underglow
   - studio
 siblings:
   - baseform_left

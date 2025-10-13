@@ -5,14 +5,25 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/led/led.h>
 #include <physical_layouts.dtsi>
 
 / {
 
     chosen {
         zephyr,display = &oled;
-	zmk,physical-layout = &baseform_6x4_lo;
-	zmk,studio-rpc-uart = &uart1;
+        zmk,physical-layout = &baseform_6x4_lo;
+        zmk,studio-rpc-uart = &uart1;
+        zmk,underglow = &led_strip;
+    };
+
+    led_strip: ws2812 {
+        compatible = "worldsemi,ws2812-gpio";
+        label = "WS2812";
+        chain-length = <1>;
+        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+        in-gpios = <&gpio0 22 GPIO_ACTIVE_HIGH>;
     };
 
     baseform_6x4_lo: baseform_6x4_lo {
