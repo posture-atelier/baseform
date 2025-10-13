@@ -15,15 +15,12 @@
         zephyr,display = &oled;
         zmk,physical-layout = &baseform_6x4_lo;
         zmk,studio-rpc-uart = &uart1;
+        zmk,underglow = &led_strip;
     };
 
-    aliases {
-        led-strip = &ws2812;
-    };
-
-    ws2812: ws2812 {
+    led_strip: ws2812 {
         compatible = "worldsemi,ws2812-gpio";
-        status = "okay";
+        label = "WS2812";
         chain-length = <1>;
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
         in-gpios = <&gpio0 22 GPIO_ACTIVE_HIGH>;
